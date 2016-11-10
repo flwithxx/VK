@@ -1,0 +1,131 @@
+{
+	"variables": [],
+	"info": {
+		"name": "VK",
+		"_postman_id": "8fe03b3e-4714-c107-e08b-a85a4975a060",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "注册 - 验证码",
+			"request": {
+				"url": "https://api.vi-ni.com/webapi/v1/send/18008019798/identifyingCode/by/231",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"userName\":\"甘杨\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "注册 - 登录",
+			"request": {
+				"url": "https://api.vi-ni.com/webapi/v1/card/activateToken",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"mobile\":\"134\",\n\t\"password\":\"111111\",\n\t\"storeId\":\"231\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "注册 - 找回密码 - 验证码",
+			"request": {
+				"url": "https://api.vi-ni.com/app/v1/sms_pasword/by/18980611603",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"mobile\":\"18980611603\",\n\t\"password\":\"123456\",\n\t\"storeId\":231\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "优惠 - 列表",
+			"request": {
+				"url": "https://api.vi-ni.com/webapi/v1/couponInfo/231/1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "cardId",
+						"value": "117395",
+						"description": ""
+					},
+					{
+						"key": "token",
+						"value": "610728d82c99a8a510d6f74dd320bc9a",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"userName\":\"甘杨\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "优惠 - 列表详情",
+			"request": {
+				"url": "https://api.vi-ni.com/webapi/v1/couponInfo/231/1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "cardId",
+						"value": "117395",
+						"description": ""
+					},
+					{
+						"key": "token",
+						"value": "610728d82c99a8a510d6f74dd320bc9a",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"userName\":\"甘杨\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
