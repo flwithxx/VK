@@ -4,7 +4,6 @@
 
   angular
     .module('vk')
-    .constant('malarkey', malarkey)
     .constant('moment', moment);
 
 })();
