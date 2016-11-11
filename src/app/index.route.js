@@ -14,7 +14,13 @@
                 controller: 'RegisterController',
                 controllerAs: 're'
             })
-            .state('forgetPwd',{
+            .state('registerWithPwd', {
+                url: '/registerWithPwd',
+                templateUrl: 'app/register/registerWithPwd.html',
+                controller: 'RegisterWithPwdController',
+                controllerAs: 'rep'
+            })
+            .state('forgetPwd', {
                 url: '/forgetPwd',
                 templateUrl: 'app/forgetPwd/forgetPwd.html',
                 controller: 'ForgetPwdController',

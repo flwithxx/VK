@@ -49,6 +49,9 @@ body {
     top:0;
     right: 0;
 }
+.login-container .weui-btn .my_greyout{
+    background-color:grey !important;
+}
 
 /**
  *  Do not remove the comments below. It's the markers used by gulp-inject to inject
