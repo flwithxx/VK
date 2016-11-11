@@ -16,7 +16,7 @@
         vm.submit = submit;
 
         function getVcode() {
-            if (!vm.mobile) {
+            if (!vm.mobile || vCodeWait) {
                 return
             }
 
@@ -55,9 +55,11 @@
                     timePromise = undefined;
                     vCodeWait = 60;
                     vm.vcodeTitle = "重新发送";
+                    vm.vcodeCss = "";
                 } else {
                     vm.vcodeTitle = "重发(" + vCodeWait + ")";
                     vCodeWait--;
+                    vm.vcodeCss = "my_greyout";
                 }
             }, 1000, 100);
 

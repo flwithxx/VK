@@ -17,7 +17,7 @@
         vm.submit = submit;
 
         function getVcode() {
-            if (!vm.mobile) {
+            if (!vm.mobile || vCodeWait) {
                 return
             }
             RegisterService.getVcode(vm.mobile).then(function (data) {
@@ -40,7 +40,6 @@
             $location.url('/registerWithPwd?mobile=' + vm.mobile + '&vcode=' + vm.vcode);
         }
 
-
         function countDown() {
             var timePromise = $interval(function () {
                 if (vCodeWait <= 0) {
@@ -49,7 +48,6 @@
                     vCodeWait = 60;
                     vm.vcodeTitle = "重新发送";
                     vm.vcodeCss = "";
-                    vm.vcodeEvent = true
                 } else {
                     vm.vcodeTitle = "重发(" + vCodeWait + ")";
                     vCodeWait--;
