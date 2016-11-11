@@ -1,30 +1,53 @@
 /**
- *  If you want to override some bootstrap variables, you have to change values here.
- *  The list of variables are listed here bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss
- */
-$navbar-inverse-link-color: #5AADBB;
-$icon-font-path: "../../bootstrap-sass/assets/fonts/bootstrap/";
-
-/**
  *  Do not remove the comments below. It's the markers used by wiredep to inject
  *  sass dependencies when defined in the bower.json of your dependencies
  */
 // bower:scss
 // endbower
 
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+// Global styles
+body {
+    background-color: #f2f2f2;
 }
 
-.thumbnail {
-  height: 200px;
+.text-center {
+    text-align: center;
+}
 
-  img.pull-right {
-    width: 50px;
-  }
+.header {
+    color: #000000;
+    font-size: 18px;
+}
+
+// Button custom styles
+.weui-btn_danger:not(.weui-btn_disabled):active {
+    color: rgba(255, 255, 255, 0.6);
+    background-color: #face23;
+}
+
+.weui-btn_danger {
+    border-radius: 0;
+    background-color: #fad534;
+}
+
+.weui-btn_danger:after {
+    border-radius: 0;
+}
+
+//Login custom styles
+.login-container .weui-cells {
+    margin-top: 0;
+}
+.login-container .weui-footer{
+    margin-top: 100px;
+}
+.login-container .weui-cell__bd.pwd{
+    position:relative;
+}
+.login-container input[type=password]+a{
+    position:absolute;
+    top:0;
+    right: 0;
 }
 
 /**

@@ -1,3 +1,31 @@
-<div class="button-sp-area">
-    <a class="weui-btn weui-btn_mini weui-btn_primary" ng-click="lv.login()">按钮</a>
+<div class="login-container">
+    <div class="weui-panel">
+        <div class="weui-panel__hd text-center header">会员登录</div>
+    </div>
+    <div class="weui-panel">
+        <div class="weui-panel__bd1">
+            <div class="weui-cells weui-cells_form">
+                <div class="weui-cell">
+                    <div class="weui-cell__hd"><label class="weui-label">账号</label></div>
+                    <div class="weui-cell__bd">
+                        <input class="weui-input" type="text" ng-model="lv.username" placeholder="输入账号"/>
+                    </div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__hd"><label class="weui-label">密码</label></div>
+                    <div class="weui-cell__bd pwd">
+                        <input class="weui-input" type="password" ng-model="lv.pwd" placeholder="输入密码"/>
+                        <a ng-click="lv.forgetPwd()">忘记密码？</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="weui-panel">
+        <a class="weui-btn weui-btn_danger" ng-click="lv.login()">登录</a>
+    </div>
+    <div class="weui-footer">
+        <span>没有账号，</span>
+        <a ng-click="lv.goRegister()">立即注册</a>
+    </div>
 </div>

@@ -14,6 +14,12 @@
                 controller: 'RegisterController',
                 controllerAs: 're'
             })
+            .state('forgetPwd',{
+                url: '/forgetPwd',
+                templateUrl: 'app/forgetPwd/forgetPwd.html',
+                controller: 'ForgetPwdController',
+                controllerAs: 'fp'
+            })
             .state('loginByVKApi', {
                 url: '/loginByVKApi',
                 templateUrl: 'app/login/loginByVKApi.html',
