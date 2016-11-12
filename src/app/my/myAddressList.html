@@ -1,0 +1,33 @@
+<div class="login-container">
+    <div class="weui-panel">
+        <div class="weui-cells">
+            <div class="weui-cell">
+                <div class="weui-cell__bd"><a for class="weui-label"><</a></div>
+                <div class="weui-cell__bd"><p>地址管理</p></div>
+                <div class="weui-cell__ft" ng-click="malc.onManageClick()">{{malc.manage}}</p></div>
+            </div>
+
+
+            <div class="weui-cell" ng-repeat="eachAddress in malc.myAddress">
+                <div class="weui-cell__bd">
+                    <div class="weui-media-box weui-media-box_text">
+                        <h4 class="weui-media-box__title">
+                            <span>{{eachAddress.name}}</span>
+                            <span style="left: 90px; position: absolute;">{{eachAddress.mobile}}
+                                <span ng-if="eachAddress.isDefault==1" style="background-color: #f9b000;">默认</span>
+                            </span>
+
+                        </h4>
+                        <p class="weui-media-box__desc">{{eachAddress.address}}</p>
+                    </div>
+                </div>
+                <div class="weui-cell__ft" style="display: flex;" ng-if="malc.manage=='取消'"><a>编辑</a>
+                    <a>删除</a></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="weui-panel">
+        <a class="weui-btn weui-btn_danger" ng-click="malc.addAddress()">+ 新建地址</a>
+    </div>
+</div>

@@ -73,6 +73,18 @@
                 templateUrl: 'app/my/myExperience.html',
                 controller: 'myExperienceController',
                 controllerAs: 'mec'
+            })
+            .state('myAddressList', {
+                url: '/myAddressList',
+                templateUrl: 'app/my/myAddressList.html',
+                controller: 'myAddressListController',
+                controllerAs: 'malc'
+            })
+            .state('myAddressAdd', {
+                url: '/myAddressAdd',
+                templateUrl: 'app/my/myAddressAdd.html',
+                controller: 'myAddressAddController',
+                controllerAs: 'maac'
             });
 
         // TODO set otherwise value to 'loginByWeChat' when production env.

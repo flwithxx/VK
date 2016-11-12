@@ -8,7 +8,7 @@
                 <div class="weui-cell weui-cell_vcode">
                     <div class="weui-cell__hd"><label class="weui-label">手机号</label></div>
                     <div class="weui-cell__bd">
-                        <input class="weui-input" type="text" ng-model="fp.mobile" placeholder="请输入手机号"/>
+                        <input class="weui-input" type="text" pattern="[0-9]*" ng-model="fp.mobile" placeholder="请输入手机号"/>
                     </div>
                     <div class="weui-cell__ft">
                         <a class="weui-btn weui-btn_danger" ng-class="fp.vcodeCss" ng-bind="fp.vcodeTitle"
