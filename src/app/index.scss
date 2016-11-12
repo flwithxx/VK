@@ -18,6 +18,13 @@ body {
     color: #000000;
     font-size: 18px;
 }
+.page {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
 
 // Button custom styles
 .weui-btn_danger:not(.weui-btn_disabled):active {
@@ -51,6 +58,14 @@ body {
 }
 .login-container .my_greyout{
     background-color:grey !important;
+}
+
+//tabbar custom styles
+.vk-tabbar .weui-tabbar__item.active{
+    background-color: #f5d133;
+}
+.vk-tabbar .weui-tabbar__item p{
+    color: #000000;
 }
 
 /**

@@ -37,7 +37,26 @@
                 templateUrl: 'app/login/loginByWeChat.html',
                 controller: 'LoginByWeChatController',
                 controllerAs: 'lw'
+            })
+            .state('shopping', {
+                url: '/shopping',
+                templateUrl: 'app/shopping/shopping.html',
+                controller: 'ShoppingController',
+                controllerAs: 'sc'
+            })
+            .state('cheep', {
+                url: '/cheep',
+                templateUrl: 'app/cheep/cheep.html',
+                controller: 'CheepController',
+                controllerAs: 'cc'
+            })
+            .state('my', {
+                url: '/my',
+                templateUrl: 'app/my/my.html',
+                controller: 'MyController',
+                controllerAs: 'mc'
             });
+
         // TODO set otherwise value to 'loginByWeChat' when production env.
         $urlRouterProvider.otherwise('/loginByVKApi');
     }
