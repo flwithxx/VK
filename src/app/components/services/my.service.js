@@ -13,13 +13,26 @@
 
     function MyService($http, $q, restUrl ) {
         return {
-            getMemberLevelDetail: getMemberLevelDetail
+            getMemberLevelDetail: getMemberLevelDetail,
+            getMyExperienceDetail:getMyExperienceDetail
         };
 
         function getMemberLevelDetail(cardId, storeId, token) {
             return $http({
                 method: 'GET',
                 url: restUrl + 'card/levellist/' + cardId + '/' + storeId + '/0/99',
+                dataType: "json",
+                headers: {
+                    cardId: cardId,
+                    token: token
+                }
+            }).then(completed).catch(failed);
+        }
+
+        function getMyExperienceDetail(cardId, storeId, token) {
+            return $http({
+                method: 'GET',
+                url: restUrl + 'card/explog/' + cardId + '/' + storeId + '/0/99',
                 dataType: "json",
                 headers: {
                     cardId: cardId,

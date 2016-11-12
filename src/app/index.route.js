@@ -67,6 +67,12 @@
                 templateUrl: 'app/my/memberLevelDetail.html',
                 controller: 'memberLevelDetailController',
                 controllerAs: 'mld'
+            })
+            .state('myExperience', {
+                url: '/myExperience',
+                templateUrl: 'app/my/myExperience.html',
+                controller: 'myExperienceController',
+                controllerAs: 'mec'
             });
 
         // TODO set otherwise value to 'loginByWeChat' when production env.

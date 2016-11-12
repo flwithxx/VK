@@ -1,0 +1,34 @@
+<div class="login-container">
+    <div class="weui-panel">
+        <div class="weui-panel__hd text-center header">我的经验值</div>
+    </div>
+
+    <div class="weui-panel" ng-repeat="eachExp in mec.myExperience">
+        <div class="weui-cells">
+            <div class="weui-cell">
+                <div class="weui-cell__bd">
+                    <p>获得分值</p>
+                </div>
+                <div class="weui-cell__ft">{{eachExp.experience}}</div>
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__bd">
+                    <p>获得方式</p>
+                </div>
+                <div class="weui-cell__ft ">{{eachExp.sourceDetails}}</div>
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__bd">
+                    <p>获得时间</p>
+                </div>
+                <div class="weui-cell__ft">{{eachExp.created}}</div>
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__bd">
+                    <p>当前经验值</p>
+                </div>
+                <div class="weui-cell__ft weui-cell_warn">{{eachExp.balance}}</div>
+            </div>
+        </div>
+    </div>
+</div>

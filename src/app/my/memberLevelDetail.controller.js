@@ -32,7 +32,7 @@
         vm.myExperience = myExperience;
 
         function myExperience() {
-            $location.url("/memberLevelDetail");
+            $location.url("/myExperience");
         }
 
 
