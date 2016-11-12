@@ -23,6 +23,24 @@
             $localStorage.token = res.token;
             $localStorage.storeId = res.data.storeId;
             $localStorage.openId = res.data.openId;
+            $localStorage.wxCardCode = res.data.wxCardCode;
+
+
+            $localStorage.memberName = res.data.name;
+            $localStorage.mobile = res.data.mobile;
+            $localStorage.otherMobile = res.data.otherMobile;
+            $localStorage.birthday = res.data.birthday;
+            $localStorage.balance = res.data.balance;
+            $localStorage.point = res.data.point;
+            $localStorage.sex = res.data.sex;
+            $localStorage.levelName = res.data.levelName;
+            $localStorage.created = res.data.created;
+            $localStorage.storeName = res.data.storeName;
+            $localStorage.idCard = res.data.idCard;
+
+            // $localStorage.levelName = res.data.levelName;
+            // $localStorage.levelName = res.data.levelName;
+            // $localStorage.levelName = res.data.levelName;
         }
 
         function setOneLocalStorage(){
