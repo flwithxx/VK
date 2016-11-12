@@ -5,11 +5,13 @@
         .module('vk')
         .controller('ShoppingController', ShoppingController);
 
-    ShoppingController.$inject = [];
+    ShoppingController.$inject = ['$localStorage'];
 
     /** @ngInject */
-    function ShoppingController() {
+    function ShoppingController($localStorage) {
         var vm = this;
+
+        console.log($localStorage)
 
     }
 })();

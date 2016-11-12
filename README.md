@@ -9,3 +9,9 @@ It's time to use Gulp tasks:
 - 11/14-11/20: 商城（不包括支付逻辑）
 - 11/21-11/27: 积分（不包括充值逻辑）
 - 11/28-12/04: 支付逻辑，充值逻辑，微信登录逻辑
+
+##localStorage
+- $localStorage.cardId
+- $localStorage.token
+- $localStorage.storeId
+- $localStorage.openId
