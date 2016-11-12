@@ -7,6 +7,7 @@
         .constant('moment', moment)
         .constant('lodash', _)
         .constant('appUrl', 'https://api.vi-ni.com/app/v1/')
-        .constant('restUrl', 'https://api.vi-ni.com/webapi/v1/');
+        .constant('restUrl', 'https://api.vi-ni.com/webapi/v1/')
+        .constant('restUrlV2', 'https://api.vi-ni.com/webapi/v2/');
 
 })();
