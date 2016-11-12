@@ -1,0 +1,55 @@
+<div class="login-container">
+    <div class="weui-panel">
+        <div class="weui-cells">
+            <div class="weui-cell" style="padding: 0">
+                <div class="weui-cell__bd" ng-click="maauc.onGoBackClick()"><a for class="weui-label"
+                                                                               style="margin-left: 15px;"><</a></div>
+                <div class="weui-cell__bd"><p>{{maauc.title}}</p></div>
+                <div class="weui-cell__ft" ng-click="maauc.onSaveClick()">
+                    <a class="weui-btn weui-btn_danger">保存</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="weui-panel">
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label">姓名</label></div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="text" placeholder="输入收件人姓名" ng-model="maauc.name">
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label">电话</label></div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="number" pattern="[0-9]*" placeholder="输入收件人电话" ng-model="maauc.mobile">
+            </div>
+        </div>
+    </div>
+    <div class="weui-panel">
+        <!--<div class="weui-cell weui-cell_select weui-cell_select-after">-->
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label for class="weui-label">城市</label></div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="text" placeholder="输入收件人所在城市" ng-model="maauc.city">
+            </div>
+            <!--<div class="weui-cell__bd">-->
+            <!--<select class="weui-select" name="select2">-->
+            <!--<option value="1">中国</option>-->
+            <!--<option value="2">美国</option>-->
+            <!--<option value="3">英国</option>-->
+            <!--</select>-->
+            <!--</div>-->
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label class="weui-label">地址</label></div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" type="text" placeholder="输入收件人详细地址" ng-model="maauc.address">
+            </div>
+        </div>
+    </div>
+
+    <label class="weui-agree">
+        <input ng-model="maauc.default" type="checkbox" class="weui-agree__checkbox">
+        <span class="weui-agree__text">设置为默认地址</span>
+    </label>
+</div>

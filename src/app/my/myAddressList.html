@@ -7,7 +7,6 @@
                 <div class="weui-cell__ft" ng-click="malc.onManageClick()">{{malc.manage}}</p></div>
             </div>
 
-
             <div class="weui-cell" ng-repeat="eachAddress in malc.myAddress">
                 <div class="weui-cell__bd">
                     <div class="weui-media-box weui-media-box_text">
@@ -21,8 +20,10 @@
                         <p class="weui-media-box__desc">{{eachAddress.address}}</p>
                     </div>
                 </div>
-                <div class="weui-cell__ft" style="display: flex;" ng-if="malc.manage=='取消'"><a>编辑</a>
-                    <a>删除</a></div>
+                <div class="weui-cell__ft" style="display: flex;" ng-if="malc.manage=='取消'">
+                    <a ng-click="malc.editAddress(eachAddress)">编辑</a>
+                    <a>删除</a>
+                </div>
             </div>
         </div>
     </div>

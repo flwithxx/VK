@@ -9,17 +9,69 @@
         .module('vk')
         .factory('MyService', MyService);
 
-    MyService.$inject = ['$http', '$q', 'restUrl','restUrlV2'];
+    MyService.$inject = ['$http', '$q', 'restUrl', 'restUrlV2'];
 
-    function MyService($http, $q, restUrl,restUrlV2 ) {
+    function MyService($http, $q, restUrl, restUrlV2) {
         return {
             getMemberLevelDetail: getMemberLevelDetail,
-            getMyExperienceDetail:getMyExperienceDetail,
-            getMyAddressList:getMyAddressList,
-            addMyAddress:addMyAddress,
+            getMyExperienceDetail: getMyExperienceDetail,
+            getMyAddressList: getMyAddressList,
+            addMyAddress: addMyAddress,
+            updateMyAddress: updateMyAddress,
+            deleteMyAddress: deleteMyAddress,
+            postMyFeedback: postMyFeedback,
         };
 
-        function addMyAddress(cardId, token , param) {
+        function postMyFeedback(cardId, storeId, token, param) {
+            return $http({
+                method: 'POST',
+                url: restUrl + 'feedback',
+                headers: {
+                    cardId: cardId,
+                    token: token
+                },
+                data: {
+                    storeId: storeId,
+                    content: param.feedback,
+                    source: "微商城v2"
+                },
+                dataType: "json"
+            }).then(completed).catch(failed);
+        }
+
+        function deleteMyAddress(cardId, token, param) {
+            return $http({
+                method: 'DELETE',
+                url: restUrlV2 + 'address/' + param.addressId,
+                headers: {
+                    cardId: cardId,
+                    token: token
+                },
+                dataType: "json"
+            }).then(completed).catch(failed);
+        }
+
+        function updateMyAddress(cardId, token, param) {
+            return $http({
+                method: 'PUT',
+                url: restUrlV2 + 'address',
+                headers: {
+                    cardId: cardId,
+                    token: token
+                },
+                data: {
+                    id: param.addressId,
+                    address: param.address,
+                    city: param.city,
+                    mobile: param.mobile,
+                    isDefault: param.isDefault,
+                    name: param.name
+                },
+                dataType: "json"
+            }).then(completed).catch(failed);
+        }
+
+        function addMyAddress(cardId, token, param) {
             return $http({
                 method: 'POST',
                 url: restUrlV2 + 'address',
@@ -28,12 +80,12 @@
                     token: token
                 },
                 data: {
-                    cardId:cardId,
-                    address:param.address,
-                    city:param.city,
-                    mobile:param.mobile,
-                    isDefault:param.default,
-                    name:param.name
+                    cardId: cardId,
+                    address: param.address,
+                    city: param.city,
+                    mobile: param.mobile,
+                    isDefault: param.isDefault,
+                    name: param.name
                 },
                 dataType: "json"
             }).then(completed).catch(failed);

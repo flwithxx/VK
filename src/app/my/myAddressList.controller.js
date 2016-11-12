@@ -27,19 +27,30 @@
 
         vm.onManageClick = onManageClick;
         vm.addAddress = addAddress;
+        vm.editAddress = editAddress;
+
+        function editAddress(item) {
+            $location.url("/myAddressAddUpdate?title=修改地址"
+                + "&city=" + item.city
+                + "&mobile=" + item.mobile
+                + "&name=" + item.name
+                + "&default=" + item.isDefault
+                + "&addressId=" + item.id
+                + "&address=" + item.address
+            );
+        }
 
         function onManageClick() {
-            if(this.manage === "管理"){
+            if (this.manage === "管理") {
                 this.manage = "取消"
-            }else if ( this.manage=== "取消"){
+            } else if (this.manage === "取消") {
                 this.manage = "管理"
             }
         }
 
         function addAddress() {
-            $location.url("/myAddressAdd");
+            $location.url("/myAddressAddUpdate");
         }
-
 
     }
 })();
