@@ -20,7 +20,42 @@
             updateMyAddress: updateMyAddress,
             deleteMyAddress: deleteMyAddress,
             postMyFeedback: postMyFeedback,
+            changeMyPwd: changeMyPwd,
+            getRechargeList: getRechargeList,
+            postRecharge: postRecharge,
+
         };
+        function changeMyPwd(cardId, token, vm) {
+            return $http({
+                method: 'POST',
+                url: restUrl + 'changePwd',
+                dataType: "json",
+                data: {
+                    oldPwd: vm.oldPwd,
+                    newPwd: vm.newPwd
+                },
+                headers: {
+                    cardId: cardId,
+                    token: token
+                }
+            }).then(completed).catch(failed);
+        }
+
+        function getRechargeList(cardId, token) {
+            return $http({
+                method: 'GET',
+                url: restUrl + 'amountConfigs/0/99',
+                dataType: "json",
+                headers: {
+                    cardId: cardId,
+                    token: token
+                }
+            }).then(completed).catch(failed);
+        }
+
+        function postRecharge() {
+
+        }
 
         function postMyFeedback(cardId, storeId, token, param) {
             return $http({

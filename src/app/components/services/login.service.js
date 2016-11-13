@@ -13,9 +13,13 @@
     function LoginService($http, $q, restUrl) {
         return {
             loginByWeChat: loginByWeChat,
-            loginByVKApi: loginByVKApi
+            loginByVKApi: loginByVKApi,
+            logout:logout,
         };
 
+        function logout() {
+
+        }
         function loginByWeChat(id) {
             return $http({
                 method: 'GET',
