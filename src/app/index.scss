@@ -18,12 +18,34 @@ body {
     color: #000000;
     font-size: 18px;
 }
+
 .page {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+}
+
+.weui-cells-no-margin-top {
+    margin-top: 0;
+}
+
+.weui-access-parent{
+    position: relative;
+}
+.weui-access-parent .weui-access-top{
+    position: absolute;
+    left: -5px;
+    top: -10px;
+}
+.weui-access-top:before{
+    font-size: 40px;
+    color: #cccccc;
+    content: "<";
+    display: inline-block;
+    height: 40px;
+    width: 40px;
 }
 
 // Button custom styles
@@ -45,27 +67,84 @@ body {
 .login-container .weui-cells {
     margin-top: 0;
 }
-.login-container .weui-footer{
+
+.login-container .weui-footer {
     margin-top: 100px;
 }
-.login-container .weui-cell__bd.pwd{
-    position:relative;
+
+.login-container .weui-cell__bd.pwd {
+    position: relative;
 }
-.login-container input[type=password]+a{
-    position:absolute;
-    top:0;
+
+.login-container input[type=password] + a {
+    position: absolute;
+    top: 0;
     right: 0;
 }
-.login-container .my_greyout{
-    background-color:grey !important;
+
+.login-container .my_greyout {
+    background-color: grey !important;
 }
 
 //tabbar custom styles
-.vk-tabbar .weui-tabbar__item.active{
+.vk-tabbar .weui-tabbar__item.active {
     background-color: #f5d133;
 }
-.vk-tabbar .weui-tabbar__item p{
+
+.vk-tabbar .weui-tabbar__item p {
     color: #000000;
+}
+
+//my custom styles
+.my-container .placeholder {
+    padding: 5px 0;
+    text-align: center;
+}
+
+.my-container .my-top {
+    background-color: #f2f2f2;
+}
+
+.my-container .top-bottom {
+    margin-top: 10px;
+    position: relative;
+    width: 100%;
+    height: 180px;
+    background: url("../assets/images/my-bg.png") 0 0 repeat-y;
+    box-shadow: 0 0 12px #878484;
+    border-radius: 5px;
+}
+
+.my-container .top {
+    padding-left: 20px;
+    position: absolute;
+    bottom: 10px;
+}
+
+.my-container .top > div {
+    background-color: #fef9dc;
+    margin-top: 10px;
+}
+
+.my-container .top > div:first-child {
+    padding-left: 10px;
+    width: 100px;
+}
+
+.my-container .top > div > span:first-child {
+    padding-left: 10px;
+}
+
+.my-container .top > div > span:last-child {
+    padding: 0 20px 0 10px;
+}
+
+.my-container .weui-grid {
+    position: relative;
+    float: left;
+    padding: 20px 10px;
+    width: 25%;
+    box-sizing: border-box;
 }
 
 /**

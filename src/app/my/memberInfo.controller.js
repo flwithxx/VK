@@ -18,11 +18,14 @@
         vm.createdLocation = $localStorage.storeName;
         vm.memberLevel = $localStorage.levelName;
         vm.goLevelDeatil = goLevelDetail;
+        vm.goBack = goBack;
 
         function goLevelDetail() {
             $location.url("/memberLevelDetail");
         }
 
-
+        function goBack() {
+            $location.url('/my');
+        }
     }
 })();
