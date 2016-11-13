@@ -11,8 +11,8 @@
   "discount": null,
   "district": "嘉定区",
   "experience": null,           //经验值
-  "id": 117395,
-  "idCard": "",                 //卡号
+  "id": 117395,                 //卡号
+  "idCard": "",
   "lastConsumeTime": null,      //上次消费时间
   "lastDay": null,
   "latitude": 0,

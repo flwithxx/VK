@@ -91,6 +91,30 @@
                 templateUrl: 'app/my/myFeedback.html',
                 controller: 'myFeedbackController',
                 controllerAs: 'mfbc'
+            })
+            .state('myAcountSetting', {
+                url: '/myAcountSetting',
+                templateUrl: 'app/my/myAcountSetting.html',
+                controller: 'myAcountSettingController',
+                controllerAs: 'masc'
+            })
+            .state('myChengePwd', {
+                url: '/myChengePwd',
+                templateUrl: 'app/my/myChengePwd.html',
+                controller: 'myChengePwdController',
+                controllerAs: 'mcpc'
+            })
+            .state('myLogout', {
+                url: '/myLogout',
+                templateUrl: 'app/my/myLogout.html',
+                controller: 'myLogoutController',
+                controllerAs: 'mloc'
+            })
+            .state('myRecharge', {
+                url: '/myRecharge',
+                templateUrl: 'app/my/myRecharge.html',
+                controller: 'myRechargeController',
+                controllerAs: 'mrc'
             });
 
         // TODO set otherwise value to 'loginByWeChat' when production env.
