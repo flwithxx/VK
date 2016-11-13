@@ -13,6 +13,10 @@
 
         vm.goChangePwd = goChangePwd;
         vm.popUp = popUp;
+        vm.goBack = goBack;
+        function goBack() {
+            $location.url('/my');
+        }
 
         function popUp() {
 

@@ -28,7 +28,11 @@
         vm.onManageClick = onManageClick;
         vm.addAddress = addAddress;
         vm.editAddress = editAddress;
+        vm.goback = goback;
 
+        function goback() {
+            $location.url("/my");
+        }
         function editAddress(item) {
             $location.url("/myAddressAddUpdate?title=修改地址"
                 + "&city=" + item.city

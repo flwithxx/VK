@@ -1,8 +1,10 @@
 <div class="login-container">
     <div class="weui-panel">
-        <div class="weui-panel__hd text-center header">会员信息</div>
+        <div class="weui-panel__hd text-center header weui-access-parent">
+            <a class="weui-access-top" ng-click="masc.goBack()"></a>
+            <span>切换账户</span>
+        </div>
     </div>
-
     <div class="weui-panel">
         <div class="weui-cells">
             <a class="weui-cell weui-cell_access" ng-click="masc.popUp()">
@@ -11,12 +13,12 @@
                 </div>
                 <div class="weui-cell__ft"></div>
             </a>
-            <a class="weui-cell weui-cell_access" ng-click="masc.goChangePwd()">
-                <div class="weui-cell__bd">
-                    <p>修改密码</p>
-                </div>
-                <div class="weui-cell__ft"></div>
-            </a>
+            <!--<a class="weui-cell weui-cell_access" ng-click="masc.goChangePwd()">-->
+                <!--<div class="weui-cell__bd">-->
+                    <!--<p>修改密码</p>-->
+                <!--</div>-->
+                <!--<div class="weui-cell__ft"></div>-->
+            <!--</a>-->
         </div>
     </div>
 </div>

@@ -18,6 +18,10 @@
         vm.rechargeAmount=0;
         vm.onCheck = onCheck;
         vm.pay = pay;
+        vm.goBack=goBack;
+        function goBack() {
+            $location.url('/my');
+        }
         function onCheck(item) {
             vm.rechargeAmount = item.amount;
         }
@@ -47,7 +51,7 @@
                     })
                 }
                 each.otherInfo = temp.join(",")
-            })
+            });
             vm.rechargeList = data.data;
         }, function (e) {
             //error msg

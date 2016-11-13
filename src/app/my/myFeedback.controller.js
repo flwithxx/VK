@@ -6,9 +6,9 @@
         .controller('myFeedbackController', myFeedbackController);
 
     /** @ngInject */
-    myFeedbackController.$inject = ['$location', 'MyService', '$localStorage', "lodash"];
+    myFeedbackController.$inject = ['$location', 'MyService', '$localStorage'];
 
-    function myFeedbackController($location, MyService, $localStorage, lodash) {
+    function myFeedbackController($location, MyService, $localStorage) {
         var cardId = $localStorage.cardId;
         var token = $localStorage.token;
         var storeId = $localStorage.storeId;
@@ -17,6 +17,11 @@
         vm.countInput = 0;
         vm.onTextChange = onTextChange;
         vm.onSubmit = onSubmit;
+        vm.goback = goback;
+
+        function goback() {
+            $location.url("/my");
+        }
 
         function onTextChange() {
             var count = vm.feedback.split("");

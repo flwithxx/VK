@@ -1,7 +1,10 @@
-<div class="login-container">
-    <div class="weui-panel">
-        <div class="weui-panel__hd text-center header">会员等级</div>
+<div class="weui-panel">
+    <div class="weui-panel__hd text-center header weui-access-parent">
+        <a class="weui-access-top" ng-click="mld.goBack()"></a>
+        <span>会员等级</span>
     </div>
+</div>
+<div class="login-container">
 
     <div class="weui-panel" ng-repeat="eachLevel in mld.levels">
         <div class="weui-cells">

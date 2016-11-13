@@ -2,8 +2,9 @@
     <div class="weui-panel">
         <div class="weui-cells">
             <div class="weui-cell" style="padding: 0">
-                <div class="weui-cell__bd" ng-click="mfbc.onGoBackClick()"><a for class="weui-label"
-                                                                               style="margin-left: 15px;"><</a></div>
+                <div class="weui-cell__bd" ng-click="mfbc.goback()">
+                    <a for class="weui-label" style="margin-left: 15px;"><</a>
+                </div>
                 <div class="weui-cell__bd"><p>意见反馈</p></div>
                 <div class="weui-cell__ft" ng-click="mfbc.onSubmit()">
                     <a class="weui-btn weui-btn_danger">提交</a>
@@ -14,7 +15,8 @@
     <div class="weui-panel">
         <div class="weui-cell">
             <div class="weui-cell__bd">
-                <textarea class="weui-textarea" ng-change="mfbc.onTextChange()" ng-model="mfbc.feedback" placeholder="输入反馈内容,不超过{{mfbc.maxInput}}个字" rows="3"></textarea>
+                <textarea class="weui-textarea" ng-change="mfbc.onTextChange()" ng-model="mfbc.feedback"
+                          placeholder="输入反馈内容,不超过{{mfbc.maxInput}}个字" rows="3"></textarea>
                 <div class="weui-textarea-counter"><span>{{mfbc.countInput}}</span>/{{mfbc.maxInput}}</div>
             </div>
         </div>

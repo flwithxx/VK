@@ -1,8 +1,10 @@
 <div class="login-container">
     <div class="weui-panel">
-        <div class="weui-panel__hd text-center header">我的经验值</div>
+        <div class="weui-panel__hd text-center header weui-access-parent">
+            <a class="weui-access-top" ng-click="mec.goBack()"></a>
+            <span>我的经验值</span>
+        </div>
     </div>
-
     <div class="weui-panel" ng-repeat="eachExp in mec.myExperience">
         <div class="weui-cells">
             <div class="weui-cell">
