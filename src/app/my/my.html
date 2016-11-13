@@ -16,7 +16,6 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                         <div class="weui-flex">
                             <div class="weui-flex__item">
@@ -26,7 +25,11 @@
                                 <div class="placeholder">积分</div>
                             </div>
                             <div class="weui-flex__item">
-                                <div class="placeholder">优惠券</div>
+                                <div class="placeholder">
+                                    <a ng-click="mc.goDetailPage('/discountCoupon')">
+                                        <span class="discount-coupon">优惠券</span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                         <div class="weui-flex">
@@ -40,64 +43,69 @@
                                 <div class="placeholder">{{mc.ticketsCount}}</div>
                             </div>
                         </div>
+                        <div class="weui-flex">
+                            <div class="barcode">
+                                <img id="barcode"/>
+                            </div>
+                        </div>
                         <div class="weui-grids">
                             <a class="weui-grid" ng-click="mc.goDetailPage('')">
                                 <div class="weui-grid__icon">
-                                    <img src="./images/icon_tabbar.png" alt="">
+                                    <img src="./assets/images/VK/i-person.png" alt="">
                                 </div>
                                 <p class="weui-grid__label">付款码</p>
                             </a>
                             <a class="weui-grid" ng-click="mc.goDetailPage('')">
                                 <div class="weui-grid__icon">
-                                    <img src="./images/icon_tabbar.png" alt="">
+                                    <img src="./assets/images/VK/i-person.png" alt="">
                                 </div>
                                 <p class="weui-grid__label">微信充值</p>
                             </a>
                             <a class="weui-grid" ng-click="mc.goDetailPage('')">
                                 <div class="weui-grid__icon">
-                                    <img src="./images/icon_tabbar.png" alt="">
+                                    <img src="./assets/images/VK/i-person.png" alt="">
                                 </div>
                                 <p class="weui-grid__label">订单中心</p>
                             </a>
                             <a class="weui-grid" ng-click="mc.goDetailPage('/memberInfo')">
                                 <div class="weui-grid__icon">
-                                    <img src="./images/icon_tabbar.png" alt="">
+                                    <img src="./assets/images/VK/i-person.png" alt="">
                                 </div>
                                 <p class="weui-grid__label">会员信息</p>
                             </a>
                             <a class="weui-grid" ng-click="mc.goDetailPage('')">
                                 <div class="weui-grid__icon">
-                                    <img src="./images/icon_tabbar.png" alt="">
+                                    <img src="./assets/images/VK/i-person.png" alt="">
                                 </div>
                                 <p class="weui-grid__label">地址管理</p>
                             </a>
                             <a class="weui-grid" ng-click="mc.goDetailPage('')">
                                 <div class="weui-grid__icon">
-                                    <img src="./images/icon_tabbar.png" alt="">
+                                    <img src="./assets/images/VK/i-person.png" alt="">
                                 </div>
                                 <p class="weui-grid__label">交易记录</p>
                             </a>
                             <a class="weui-grid" ng-click="mc.goDetailPage('')">
                                 <div class="weui-grid__icon">
-                                    <img src="./images/icon_tabbar.png" alt="">
+                                    <img src="./assets/images/VK/i-person.png" alt="">
                                 </div>
                                 <p class="weui-grid__label">资产转移</p>
                             </a>
                             <a class="weui-grid" ng-click="mc.goDetailPage('')">
                                 <div class="weui-grid__icon">
-                                    <img src="./images/icon_tabbar.png" alt="">
+                                    <img src="./assets/images/VK/i-person.png" alt="">
                                 </div>
                                 <p class="weui-grid__label">切换账户</p>
                             </a>
                             <a class="weui-grid" ng-click="mc.goDetailPage('')">
                                 <div class="weui-grid__icon">
-                                    <img src="./images/icon_tabbar.png" alt="">
+                                    <img src="./assets/images/VK/i-person.png" alt="">
                                 </div>
                                 <p class="weui-grid__label">修改密码</p>
                             </a>
                             <a class="weui-grid" ng-click="mc.goDetailPage('')">
                                 <div class="weui-grid__icon">
-                                    <img src="./images/icon_tabbar.png" alt="">
+                                    <img src="./assets/images/VK/i-person.png" alt="">
                                 </div>
                                 <p class="weui-grid__label">意见反馈</p>
                             </a>

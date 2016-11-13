@@ -23,7 +23,7 @@
 
         function goCheep(name){
             vm.active = name;
-            $location.url('/cheep');
+            $location.url('/pointShop');
         }
 
         function goMy(name){

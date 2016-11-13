@@ -44,11 +44,11 @@
                 controller: 'ShoppingController',
                 controllerAs: 'sc'
             })
-            .state('cheep', {
-                url: '/cheep',
-                templateUrl: 'app/cheep/cheep.html',
-                controller: 'CheepController',
-                controllerAs: 'cc'
+            .state('pointShop', {
+                url: '/pointShop',
+                templateUrl: 'app/pointShop/pointShop.html',
+                controller: 'PointShopController',
+                controllerAs: 'ps'
             })
             .state('my', {
                 url: '/my',

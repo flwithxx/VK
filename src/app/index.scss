@@ -147,6 +147,31 @@ body {
     box-sizing: border-box;
 }
 
+.my-container .barcode{
+    width: 90%;
+    border: 1px solid #ece9e9;
+    text-align: center;
+    margin: 10px auto;
+}
+
+.my-container .barcode img{
+    height: 100px;
+}
+
+.my-container .discount-coupon:after{
+    content: " ";
+    display: inline-block;
+    height: 6px;
+    width: 6px;
+    border-width: 2px 2px 0 0;
+    border-color: #C8C8CD;
+    border-style: solid;
+    -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    position: relative;
+    top: -2px;
+}
+
 /**
  *  Do not remove the comments below. It's the markers used by gulp-inject to inject
  *  all your sass files automatically
