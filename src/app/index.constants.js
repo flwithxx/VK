@@ -7,9 +7,8 @@
         .constant('moment', moment)
         .constant('lodash', _)
         .constant('JsBarcode', JsBarcode)
-        .constant('appUrl', 'http://192.168.1.104/app/')
-        .constant('restUrl', 'http://192.168.1.104/rest/')
-        .constant('restUrlV2', 'http://192.168.1.104/rest2/');
-
+        .constant('appUrl', 'https://api.vi-ni.com/app/v1/')
+        .constant('restUrl', 'https://api.vi-ni.com/webapi/v1/')
+        .constant('restUrlV2', 'https://api.vi-ni.com/webapi/v2/');
 
 })();
