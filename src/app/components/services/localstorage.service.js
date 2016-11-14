@@ -15,10 +15,10 @@
             setAllLocalStorage: setAllLocalStorage,
             setOneLocalStorage: setOneLocalStorage,
             removeAllLocalStorage: removeAllLocalStorage,
-            removeOneLocalStorage:removeOneLocalStorage
+            removeOneLocalStorage: removeOneLocalStorage
         };
 
-        function setAllLocalStorage(res){
+        function setAllLocalStorage(res) {
             $localStorage.cardId = res.cardId;
             $localStorage.token = res.token;
             $localStorage.storeId = res.data.storeId;
@@ -43,19 +43,19 @@
             // $localStorage.levelName = res.data.levelName;
         }
 
-        function setOneLocalStorage(){
-
+        function setOneLocalStorage(key, value) {
+            $localStorage[key] = value;
         }
 
-        function removeAllLocalStorage(){
+        function removeAllLocalStorage() {
             delete $localStorage.cardId;
             delete $localStorage.token;
             delete $localStorage.storeId;
             delete $localStorage.openId;
         }
 
-        function removeOneLocalStorage(){
-
+        function removeOneLocalStorage(key) {
+            delete $localStorage[key];
         }
     }
 })();

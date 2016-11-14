@@ -30,6 +30,17 @@ body {
 .weui-cells-no-margin-top {
     margin-top: 0;
 }
+//重写radio的样式
+.weui-cells_radio .weui-check:checked + .weui-icon-checked:before {
+    content: '\EA06';
+    color: white;
+}
+.weui-cells_radio .weui-icon-checked:before  {
+    display: block;
+    content: '\EA08';
+    color: #614402;
+    font-size: 16px;
+}
 
 .weui-access-parent {
     position: relative;

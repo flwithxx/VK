@@ -9,17 +9,17 @@
         .module('vk')
         .factory('RegisterService', RegisterService);
 
-    RegisterService.$inject = ['$http', '$q', 'restUrl', 'StorageService'];
+    RegisterService.$inject = ['$http', '$q', 'restUrl'];
 
-    function RegisterService($http, $q, restUrl, StorageService) {
+    function RegisterService($http, $q, restUrl) {
         return {
             getVcode: getVcode
         };
 
-        function getVcode(mobile) {
+        function getVcode(storeId, param) {
             return $http({
                 method: 'GET',
-                url: restUrl + 'send/' + mobile + '/identifyingCode/by/' + StorageService.get("storeId"),
+                url: restUrl + 'send/' + param.mobile + '/identifyingCode/by/' + storeId,
                 dataType: "json"
             }).then(completed).catch(failed);
         }

@@ -6,10 +6,11 @@
         .controller('RegisterController', RegisterController);
 
     /** @ngInject */
-    RegisterController.$inject = ['$interval', '$location', 'RegisterService'];
+    RegisterController.$inject = ['$interval', '$location', 'RegisterService', '$localStorage'];
 
-    function RegisterController($interval, $location, RegisterService) {
+    function RegisterController($interval, $location, RegisterService, $localStorage) {
         var vCodeWait = 60;
+        var storeId = $localStorage.storeId;
         var vm = this;
         vm.vcodeTitle = "获取验证码";
         vm.checked = true;
@@ -17,10 +18,10 @@
         vm.submit = submit;
 
         function getVcode() {
-            if (!vm.mobile || vCodeWait) {
+            if (!vm.mobile || !vCodeWait) {
                 return
             }
-            RegisterService.getVcode(vm.mobile).then(function (data) {
+            RegisterService.getVcode(storeId, vm).then(function (data) {
                 console.log(data);
                 if (data.code != 200) {
                     alert(data.message);
