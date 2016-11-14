@@ -31,15 +31,17 @@ body {
     margin-top: 0;
 }
 
-.weui-access-parent{
+.weui-access-parent {
     position: relative;
 }
-.weui-access-parent .weui-access-top{
+
+.weui-access-parent .weui-access-top {
     position: absolute;
     left: -5px;
     top: -10px;
 }
-.weui-access-top:before{
+
+.weui-access-top:before {
     font-size: 40px;
     color: #cccccc;
     content: "<";
@@ -147,18 +149,18 @@ body {
     box-sizing: border-box;
 }
 
-.my-container .barcode{
+.my-container .barcode {
     width: 90%;
     border: 1px solid #ece9e9;
     text-align: center;
     margin: 10px auto;
 }
 
-.my-container .barcode img{
+.my-container .barcode img {
     height: 100px;
 }
 
-.my-container .discount-coupon:after{
+.my-container .discount-coupon:after {
     content: " ";
     display: inline-block;
     height: 6px;
@@ -170,6 +172,65 @@ body {
     transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
     position: relative;
     top: -2px;
+}
+
+// discount coupon custom styles
+.discount-coupon-container .weui-navbar__item.active {
+    background-color: #f5d133;
+}
+
+.discount-coupon-container ul.items {
+    padding: 20px;
+    list-style: none;
+}
+
+.discount-coupon-container ul.items li {
+    margin-bottom: 20px;
+}
+
+.discount-coupon-container ul.items li .item {
+    position: relative;
+    background-color: #ffffff;
+    padding: 10px 20px 5px 20px;
+}
+
+.discount-coupon-container ul.items li .item .title {
+    padding: 0 !important;
+}
+
+.discount-coupon-container ul.items li .item .title.other {
+    color: #9c9ca0;
+}
+
+.discount-coupon-container ul.items li .item .type {
+    position: absolute;
+    top: 25px;
+    padding: 0 10px !important;
+    right: 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #face23 !important;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    border: 1px solid #face23;
+}
+
+.discount-coupon-container ul.items li .item .type.used,
+.discount-coupon-container ul.items li .item .type.overdue {
+    color: #9c9ca0 !important;
+    border-color: #9c9ca0;
+}
+
+.discount-coupon-container ul.items li .item div:not(.line) {
+    padding: 5px 0;
+}
+
+.discount-coupon-container ul.items li .item div:not(.title) {
+    color: #9c9ca0;
+}
+
+.discount-coupon-container ul.items li .line {
+    border-top: 1px dashed #cccccc;
 }
 
 /**

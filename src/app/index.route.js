@@ -50,6 +50,12 @@
                 controller: 'PointShopController',
                 controllerAs: 'ps'
             })
+            .state('discountCoupon', {
+                url: '/discountCoupon',
+                templateUrl: 'app/discountCoupon/discountCoupon.html',
+                controller: 'DiscountCouponController',
+                controllerAs: 'dcc'
+            })
             .state('my', {
                 url: '/my',
                 templateUrl: 'app/my/my.html',

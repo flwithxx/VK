@@ -23,6 +23,7 @@
             changeMyPwd: changeMyPwd,
             getRechargeList: getRechargeList,
             postRecharge: postRecharge,
+            getDiscountCouponList: getDiscountCouponList
 
         };
         function changeMyPwd(cardId, token, vm) {
@@ -154,6 +155,18 @@
             return $http({
                 method: 'GET',
                 url: restUrlV2 + 'address/by/' + cardId + '/0/99',
+                dataType: "json",
+                headers: {
+                    cardId: cardId,
+                    token: token
+                }
+            }).then(completed).catch(failed);
+        }
+
+        function getDiscountCouponList(cardId, token, openId){
+            return $http({
+                method: 'GET',
+                url: restUrl + 'ticket/getByOpenId/' + openId,
                 dataType: "json",
                 headers: {
                     cardId: cardId,

@@ -1,0 +1,36 @@
+<div class="discount-coupon-container">
+    <div class="page">
+        <div class="page__bd" style="height: 100%;">
+            <div class="weui-panel">
+                <div class="weui-panel__hd text-center header weui-access-parent">
+                    <a class="weui-access-top" ng-click="dcc.goBack()"></a>
+                    <span>优惠券</span>
+                </div>
+            </div>
+            <div class="weui-tab">
+                <div class="weui-navbar">
+                    <a class="weui-navbar__item" ng-class="{'active':dcc.active === 'one'}" ng-click="dcc.switchTab('one')">未使用</a>
+                    <a class="weui-navbar__item" ng-class="{'active':dcc.active === 'two'}" ng-click="dcc.switchTab('two')">已使用</a>
+                    <a class="weui-navbar__item" ng-class="{'active':dcc.active === 'three'}" ng-click="dcc.switchTab('three')">已过期</a>
+                </div>
+                <div class="weui-tab__panel">
+                    <ul class="items">
+                        <li ng-repeat="li in dcc.list">
+                            <div class="item">
+                                <div class="title" ng-class="{'other': li.type!==1}">{{li.name}}</div>
+                                <div class="note">{{li.remark || '不能与其他抵用券同时用'}}</div>
+                                <div class="line"></div>
+                                <div class="date">有效期：{{li.beginTime}}至{{li.endTime}}</div>
+                                <div class="type" ng-if="li.ticketType ===0&&li.type===1">代金券</div>
+                                <div class="type" ng-if="li.ticketType ===1&&li.type===1">折扣券</div>
+                                <div class="type" ng-if="li.ticketType ===2&&li.type===1">咖啡券</div>
+                                <div class="type used" ng-if="li.type===0">已使用</div>
+                                <div class="type overdue" ng-if="li.type===3">已过期</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

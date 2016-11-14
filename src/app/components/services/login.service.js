@@ -14,7 +14,7 @@
         return {
             loginByWeChat: loginByWeChat,
             loginByVKApi: loginByVKApi,
-            logout:logout,
+            logout:logout
         };
 
         function logout() {
