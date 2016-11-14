@@ -9,21 +9,22 @@
         .module('vk')
         .factory('RegisterWithPwdService', RegisterWithPwdService);
 
-    RegisterWithPwdService.$inject = ['$http', '$q', 'restUrl'];
+    RegisterWithPwdService.$inject = ['$http', '$q', 'restUrlV2'];
 
-    function RegisterWithPwdService($http, $q, restUrl) {
+    function RegisterWithPwdService($http, $q, restUrlV2) {
         return {
             register: register
         };
 
-        function register(mobile, vcode, pwd) {
+        function register(storeId, param) {
             return $http({
                 method: 'POST',
-                url: restUrl + 'card',
+                url: restUrlV2 + 'card',
                 data: {
-                    mobile: mobile,
-                    sms: vcode,
-                    password: pwd
+                    storeId: storeId,
+                    mobile: param.mobile,
+                    sms: param.vcode,
+                    password: param.pwd
                 },
                 dataType: "json"
             }).then(completed).catch(failed);

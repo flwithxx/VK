@@ -16,7 +16,7 @@
         vm.submit = submit;
 
         function getVcode() {
-            if (!vm.mobile || vCodeWait) {
+            if (!vm.mobile || !vCodeWait) {
                 return
             }
 
