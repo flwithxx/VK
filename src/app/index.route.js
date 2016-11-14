@@ -56,6 +56,12 @@
                 controller: 'DiscountCouponController',
                 controllerAs: 'dcc'
             })
+            .state('orderManager', {
+                url: '/orderManager',
+                templateUrl: 'app/orderManager/orderManager.html',
+                controller: 'OrderManagerController',
+                controllerAs: 'oc'
+            })
             .state('my', {
                 url: '/my',
                 templateUrl: 'app/my/my.html',
