@@ -1,14 +1,16 @@
 <div class="discount-coupon-container">
     <div class="page">
         <div class="page__bd" style="height: 100%;">
-            <div class="weui-panel">
-                <div class="weui-panel__hd text-center header weui-access-parent">
-                    <a class="weui-access-top" ng-click="dcc.goBack()"></a>
-                    <span>优惠券</span>
+            <div class="weui-tab first">
+                <div class="weui-navbar">
+                    <div class="weui-navbar__item">
+                        <a class="" ng-click="dcc.goBack()"></a>
+                        <span>优惠券</span>
+                    </div>
                 </div>
             </div>
-            <div class="weui-tab">
-                <div class="weui-navbar">
+            <div class="weui-tab second">
+                <div class="weui-navbar second">
                     <a class="weui-navbar__item" ng-class="{'active':dcc.active === 'one'}" ng-click="dcc.switchTab('one')">未使用</a>
                     <a class="weui-navbar__item" ng-class="{'active':dcc.active === 'two'}" ng-click="dcc.switchTab('two')">已使用</a>
                     <a class="weui-navbar__item" ng-class="{'active':dcc.active === 'three'}" ng-click="dcc.switchTab('three')">已过期</a>

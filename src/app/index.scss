@@ -36,18 +36,33 @@ body {
 }
 
 .weui-access-parent .weui-access-top {
+
+}
+
+.weui-access-top:before {
+
+}
+.weui-tab.first{
+    height: auto;
+}
+.weui-tab.first a{
     position: absolute;
     left: -5px;
     top: -10px;
 }
-
-.weui-access-top:before {
+.weui-tab.first a:before{
     font-size: 40px;
     color: #cccccc;
     content: "<";
     display: inline-block;
     height: 40px;
     width: 40px;
+}
+.weui-navbar.second{
+    top:50px;
+}
+.weui-navbar.second + .weui-tab__panel{
+    padding-top: 100px;
 }
 
 // Button custom styles
