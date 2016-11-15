@@ -67,6 +67,10 @@ body {
     top: 50px;
 }
 
+.weui-navbar.first + .weui-tab__panel {
+    padding-top: 50px;
+}
+
 .weui-navbar.second + .weui-tab__panel {
     padding-top: 100px;
 }
