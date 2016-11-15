@@ -71,6 +71,11 @@ body {
     padding-top: 100px;
 }
 
+//navbar
+.weui-navbar__item.active {
+    background-color: #f5d133;
+}
+
 // Button custom styles
 .weui-btn_danger:not(.weui-btn_disabled):active {
     color: rgba(255, 255, 255, 0.6);
@@ -196,10 +201,6 @@ body {
 }
 
 // discount coupon custom styles
-.discount-coupon-container .weui-navbar__item.active {
-    background-color: #f5d133;
-}
-
 .discount-coupon-container ul.items {
     padding: 20px;
     list-style: none;

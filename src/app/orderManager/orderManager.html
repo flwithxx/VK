@@ -1,9 +1,27 @@
-<div class="cheep-container">
+<div class="order-manager-container">
     <div class="page">
         <div class="page__bd" style="height: 100%;">
-            <div class="weui-tab">
+            <div class="weui-tab first">
+                <div class="weui-navbar">
+                    <div class="weui-navbar__item">
+                        <a class="" ng-click="oc.goBack()"></a>
+                        <span>优惠券</span>
+                    </div>
+                </div>
+            </div>
+            <div class="weui-tab second">
+                <div class="weui-navbar second">
+                    <a class="weui-navbar__item" ng-class="{'active':oc.active === 'one'}" ng-click="oc.switchTab('one')">外卖订单</a>
+                    <a class="weui-navbar__item" ng-class="{'active':oc.active === 'two'}" ng-click="oc.switchTab('two')">点单订单</a>
+                </div>
                 <div class="weui-tab__panel">
-                    订单管理
+                    <ul class="items">
+                        <li ng-repeat="li in oc.list">
+                            <div class="item">
+                                {{li}}
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>

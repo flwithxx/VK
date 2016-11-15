@@ -17,10 +17,9 @@
         vm.goBack = goBack;
         MyService.getDiscountCouponList($localStorage.cardId, $localStorage.token, $localStorage.openId).then(function (res) {
             lists = res.data;
-            lists[2].type = 0;
-            lists[4].ticketType = 1;
-            lists[3].type = 3;
-            console.log(lists)
+            // lists[2].type = 0;
+            // lists[4].ticketType = 1;
+            // lists[3].type = 3;
             vm.switchTab('one');
         });
 
@@ -33,6 +32,7 @@
             } else if (tab === 'two') {
                 vm.list = lodash.filter(lists, {type: 0});
             } else {
+                //TODO unkown expired data
                 vm.list = lodash.filter(lists, {type: 3});
             }
         }
