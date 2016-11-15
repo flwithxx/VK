@@ -75,6 +75,17 @@ body {
     padding-top: 100px;
 }
 
+.weui-bottom-bar{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    position: absolute;
+    z-index: 500;
+    bottom: 0;
+    width: 100%;
+    background-color: #f7f7fa;
+}
+
 //navbar
 .weui-navbar__item.active {
     background-color: #f5d133;
@@ -258,6 +269,15 @@ body {
 .discount-coupon-container ul.items li .line {
     border-top: 1px dashed #cccccc;
 }
+// my recharge
+.my-recharge-container .weui-navbar.second .weui-grids{
+    width: 100%;
+}
+.my-recharge-container .weui-navbar.second + .weui-tab__panel {
+    padding-top: 124px;
+    padding-bottom: 45px;
+}
+
 
 /**
  *  Do not remove the comments below. It's the markers used by gulp-inject to inject
