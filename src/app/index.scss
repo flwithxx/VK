@@ -75,7 +75,7 @@ body {
     padding-top: 100px;
 }
 
-.weui-bottom-bar{
+.weui-bottom-bar {
     display: -webkit-box;
     display: -webkit-flex;
     display: flex;
@@ -85,8 +85,48 @@ body {
     width: 100%;
     background-color: #f7f7fa;
 }
+.weui-bottom-bar .weui-panel.bottom_button_full{
+    width: 100%;
+}
 
-//navbar
+.weui-top-bar {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    position: absolute;
+    z-index: 500;
+    top: 0;
+    width: 100%;
+    background-color: #f7f7fa;
+}
+
+.weui-cell.header {
+    height: 44px;
+}
+//********** header start ************/
+.weui-cell.header .left_icon {
+    position: absolute;
+    top: 10px;
+    left: 10px
+}
+
+.weui-cell.header .label {
+    text-align: center;
+    width: 100%;
+}
+
+.weui-cell.header .right_icon {
+    position: absolute;
+    top: 0;
+    right: 0
+}
+
+ .weui-cell.header .right_icon .button-clear{
+     border: 0;
+     background-color: transparent;
+ }
+
+//********** navbar ************/
 .weui-navbar__item.active {
     background-color: #f5d133;
 }
@@ -106,7 +146,20 @@ body {
     border-radius: 0;
 }
 
-//Login custom styles
+
+//********** tabbar custom styles ************/
+.vk-tabbar .weui-tabbar__item.active {
+    background-color: #f5d133;
+}
+
+.vk-tabbar .weui-tabbar__item p {
+    color: #000000;
+}
+
+
+
+// 以下是每个container自己的样式
+//********** login-container custom styles  start ***********/
 .login-container .weui-cells {
     margin-top: 0;
 }
@@ -129,16 +182,7 @@ body {
     background-color: grey !important;
 }
 
-//tabbar custom styles
-.vk-tabbar .weui-tabbar__item.active {
-    background-color: #f5d133;
-}
-
-.vk-tabbar .weui-tabbar__item p {
-    color: #000000;
-}
-
-//my custom styles
+//********** my-container custom styles  start ***********/
 .my-container .placeholder {
     padding: 5px 0;
     text-align: center;
@@ -215,7 +259,7 @@ body {
     top: -2px;
 }
 
-// discount coupon custom styles
+//********** discount-coupon-container custom styles start ***********/
 .discount-coupon-container ul.items {
     padding: 20px;
     list-style: none;
@@ -269,16 +313,41 @@ body {
 .discount-coupon-container ul.items li .line {
     border-top: 1px dashed #cccccc;
 }
-// my recharge
-.my-recharge-container .weui-navbar.second .weui-grids{
-    width: 100%;
-}
-.my-recharge-container .weui-navbar.second + .weui-tab__panel {
-    padding-top: 124px;
-    padding-bottom: 45px;
+
+//********** my-account-setting-container custom styles start ***********/
+.my-account-setting-container .weui-cells{
+    margin-top: 0px;
 }
 
+//********** my-account-setting-container custom styles start ***********/
+.memberinfo-container .weui-cells{
+    margin-top: 0px;
+}
 
+//********** my-recharge-container custom styles start ***********/
+.my-recharge-container .weui-cells{
+    margin-top: 0px;
+}
+
+//********** meberlevel-container custom styles start ***********/
+.meberlevel-container .weui-cells{
+    margin-top: 0px;
+}
+
+//********** my-address-container custom styles start ***********/
+.my-address-container .weui-cells{
+    margin-top: 0px;
+}
+
+//********** my-address-add-update-container custom styles start ***********/
+.my-address-add-update-container .weui-cells{
+    margin-top: 0px;
+}
+
+//********** my-feedback-container custom styles start ***********/
+.my-feedback-container .weui-cells{
+    margin-top: 0px;
+}
 /**
  *  Do not remove the comments below. It's the markers used by gulp-inject to inject
  *  all your sass files automatically

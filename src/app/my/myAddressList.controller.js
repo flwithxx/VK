@@ -28,9 +28,9 @@
         vm.onManageClick = onManageClick;
         vm.addAddress = addAddress;
         vm.editAddress = editAddress;
-        vm.goback = goback;
+        vm.goBack = goBack;
 
-        function goback() {
+        function goBack() {
             $location.url("/my");
         }
         function editAddress(item) {

@@ -110,10 +110,10 @@
                 controller: 'myAcountSettingController',
                 controllerAs: 'masc'
             })
-            .state('myChengePwd', {
-                url: '/myChengePwd',
-                templateUrl: 'app/my/myChengePwd.html',
-                controller: 'myChengePwdController',
+            .state('myChangePwd', {
+                url: '/myChangePwd',
+                templateUrl: 'app/my/myChangePwd.html',
+                controller: 'myChangePwdController',
                 controllerAs: 'mcpc'
             })
             .state('myLogout', {

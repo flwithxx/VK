@@ -1,24 +1,36 @@
-<div class="login-container">
-    <div class="weui-panel">
-        <div class="weui-panel__hd text-center header weui-access-parent">
-            <a class="weui-access-top" ng-click="masc.goBack()"></a>
-            <span>切换账户</span>
+<div class="my-account-setting-container">
+    <div class="weui-top-bar">
+        <div class="weui-cells" style="width: 100%;margin-top: 0px">
+            <div class="weui-cell weui-cell_vcode header">
+                <div class="left_icon" style="">
+                    <img src="../assets/images/VK/fanhui.png" width="15px" ng-click="masc.goBack()">
+                </div>
+                <div class="label" style="">帐户设置</div>
+                <div class="right_icon" style="">
+                    <!--<a class="weui-vcode-btn weui-btn_danger" ng-click="mrc.pay()" style="color:black">支付</a>-->
+                </div>
+            </div>
         </div>
     </div>
-    <div class="weui-panel">
-        <div class="weui-cells">
-            <a class="weui-cell weui-cell_access" ng-click="masc.popUp()">
-                <div class="weui-cell__bd">
-                    <p>退出当前账号</p>
-                </div>
-                <div class="weui-cell__ft"></div>
-            </a>
-            <!--<a class="weui-cell weui-cell_access" ng-click="masc.goChangePwd()">-->
-                <!--<div class="weui-cell__bd">-->
+
+    <div class="page" style="top:54px">
+        <div class="page__bd" style="height: 100%;">
+            <div class="weui-tab__panel">
+                <div class="weui-cells">
+                    <a class="weui-cell weui-cell_access" ng-click="masc.popUp()">
+                        <div class="weui-cell__bd">
+                            <p>退出当前账号</p>
+                        </div>
+                        <div class="weui-cell__ft"></div>
+                    </a>
+                    <!--<a class="weui-cell weui-cell_access" ng-click="masc.goChangePwd()">-->
+                    <!--<div class="weui-cell__bd">-->
                     <!--<p>修改密码</p>-->
-                <!--</div>-->
-                <!--<div class="weui-cell__ft"></div>-->
-            <!--</a>-->
+                    <!--</div>-->
+                    <!--<div class="weui-cell__ft"></div>-->
+                    <!--</a>-->
+                </div>
+            </div>
         </div>
     </div>
 </div>

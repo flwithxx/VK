@@ -1,44 +1,60 @@
-<div class="weui-panel">
-    <div class="weui-panel__hd text-center header weui-access-parent">
-        <a class="weui-access-top" ng-click="mld.goBack()"></a>
-        <span>会员等级</span>
-    </div>
-</div>
-<div class="login-container">
-
-    <div class="weui-panel" ng-repeat="eachLevel in mld.levels">
-        <div class="weui-cells">
-            <div class="weui-cell">
-                <div class="weui-cell__bd">
-                    <p>会员卡等级</p>
+<div class="meberlevel-container">
+    <div class="weui-top-bar">
+        <div class="weui-cells" style="width: 100%;margin-top: 0px">
+            <div class="weui-cell weui-cell_vcode header">
+                <div class="left_icon">
+                    <img src="../assets/images/VK/fanhui.png" width="15px" ng-click="mld.goBack()">
                 </div>
-                <div class="weui-cell__ft">{{eachLevel.levelName}}</div>
-            </div>
-            <div class="weui-cell">
-                <div class="weui-cell__bd">
-                    <p>享受折扣值</p>
-                </div>
-                <div class="weui-cell__ft">{{eachLevel.discount}}折</div>
-            </div>
-            <div class="weui-cell">
-                <div class="weui-cell__bd">
-                    <p>经验值范围</p>
-                </div>
-                <div class="weui-cell__ft">{{eachLevel.lowerLimit}}-{{eachLevel.upperLimit}}</div>
-            </div>
-            <div class="weui-cell" style="min-height: 25px">
-                <div class="weui-cell__bd">
-                    <p style="top: 10px; position: absolute;">等级升级奖</p>
-                </div>
-                <div class="weui-cell__ft">
-                    <div ng-repeat="eachTicket in eachLevel.ticketNames">{{eachTicket}}</div>
+                <div class="label" style="">会员等级</div>
+                <div class="right_icon">
+                    <!--<a class="weui-vcode-btn weui-btn_danger" ng-click="mrc.pay()" style="color:black">支付</a>-->
                 </div>
             </div>
         </div>
     </div>
 
-
-    <div class="weui-panel">
-        <a class="weui-btn weui-btn_danger" ng-click="mld.myExperience()">查看我的经验值</a>
+    <div class="page" style="top:54px">
+        <div class="page__bd" style="height: 100%;">
+            <div class="weui-tab__panel">
+                <div class="weui-panel" ng-repeat="eachLevel in mld.levels">
+                    <div class="weui-cells">
+                        <div class="weui-cell">
+                            <div class="weui-cell__bd">
+                                <p>会员卡等级</p>
+                            </div>
+                            <div class="weui-cell__ft">{{eachLevel.levelName}}</div>
+                        </div>
+                        <div class="weui-cell">
+                            <div class="weui-cell__bd">
+                                <p>享受折扣值</p>
+                            </div>
+                            <div class="weui-cell__ft">{{eachLevel.discount}}折</div>
+                        </div>
+                        <div class="weui-cell">
+                            <div class="weui-cell__bd">
+                                <p>经验值范围</p>
+                            </div>
+                            <div class="weui-cell__ft">{{eachLevel.lowerLimit}}-{{eachLevel.upperLimit}}</div>
+                        </div>
+                        <div class="weui-cell" style="min-height: 25px">
+                            <div class="weui-cell__bd">
+                                <p style="top: 10px; position: absolute;">等级升级奖</p>
+                            </div>
+                            <div class="weui-cell__ft">
+                                <div ng-repeat="eachTicket in eachLevel.ticketNames">{{eachTicket}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <div class="weui-bottom-bar">
+        <div class="weui-panel bottom_button_full">
+            <a class="weui-btn weui-btn_danger" ng-click="mld.myExperience()">查看我的经验值</a>
+        </div>
+    </div>
+
+
 </div>

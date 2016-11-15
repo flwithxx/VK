@@ -17,9 +17,9 @@
         vm.countInput = 0;
         vm.onTextChange = onTextChange;
         vm.onSubmit = onSubmit;
-        vm.goback = goback;
+        vm.goBack = goBack;
 
-        function goback() {
+        function goBack() {
             $location.url("/my");
         }
 
